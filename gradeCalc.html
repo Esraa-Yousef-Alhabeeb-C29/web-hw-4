@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <html dir="rtl"
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>حاسبة الدرجات 🎓🎓</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <h1>الحاسبة 🔢</h1>
 
       <div class="directions">أدخل درجاتك، كل درجة في الحقل الخاص بها</div>
+       <nav>
+         <input id="Quizes" type="text" />
+         <input id="Midterm" type="text" />
+         <input id="FinalTest" type="text" />
+         <input id="Oral" type="text" />
 
-      <input id="Quizes" type="text" />
-      <input id="Midterm" type="text" />
-      <input id="FinalTest" type="text" />
-      <input id="Oral" type="text" />
+       </nav>
 
       <input
         id="submitButton"
@@ -29,6 +33,66 @@
 
       <p>درجتك النهائية هي (بالأحرف)</p>
       <div id="final_grade"></div>
+
+     
     </div>
+
+    <script>
+       function submit () {
+    var Quizes = parseFloat(document.getElementById("Quizes").value);
+    var Midterm = parseFloat(document.getElementById("Midterm").value);
+    var FinalTest = parseFloat(document.getElementById("FinalTest").value);
+    var Oral = parseFloat(document.getElementById("Oral").value);
+    var total =   Quizes+Midterm+FinalTest+Oral;
+
+   
+
+       
+    if (total >= 90 && total <= 100) {
+    document.getElementById("total_grades").innerHTML =  total ;
+        document.getElementById("final_grade").innerHTML = "A";
+        var a = document.createElement("img");
+        a.setAttribute("src", "https://media.giphy.com/media/xUOwGkv94Kewuz76vK/giphy.gif");
+       document.body.appendChild(a);
+       }
+
+        else if (total >= 80) {
+          document.getElementById("total_grades").innerHTML =  total ;
+              document.getElementById("final_grade").innerHTML = "B";
+              var b = document.createElement("img");
+             b.setAttribute("src", "https://media.giphy.com/media/JQpy27Co5r8mP1p3QT/giphy.gif");
+           document.body.appendChild(b);
+    
+        }
+        else if (total >= 70) {
+          document.getElementById("total_grades").innerHTML =  total ;
+              document.getElementById("final_grade").innerHTML = "C";
+              var c = document.createElement("img");
+             c.setAttribute("src", "https://media.giphy.com/media/oX7uCHUiOtgd3qBBUZ/giphy.gif");
+           document.body.appendChild(c);
+        }
+        else if (total >= 60) {
+          document.getElementById("total_grades").innerHTML =  total ;
+              document.getElementById("final_grade").innerHTML = "D";
+              var d = document.createElement("img");
+             d.setAttribute("src", "https://media.giphy.com/media/eh0nHqLSZwh3dhA450/giphy.gif");
+           document.body.appendChild(d);
+        }
+        else  {
+          document.getElementById("total_grades").innerHTML =  total ;
+              document.getElementById("final_grade").innerHTML = "F";
+              var f = document.createElement("img");
+             f.setAttribute("src", " https://media.giphy.com/media/l1J9u3TZfpmeDLkD6/giphy.gif");
+           document.body.appendChild(f);
+        }
+       
+
+
+      
+}
+
+
+    </script>
+  
   </body>
 </html>

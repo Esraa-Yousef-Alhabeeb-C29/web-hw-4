@@ -1,1 +1,29 @@
 /* 🎓 تحت هذا التعليق أتحفونا بتصاميمكم التي تليق بقدر حاسبة الدرجات */
+*{
+    text-align: center;
+    
+}
+
+body{
+   background-color: black;
+   color: white;
+}
+nav{
+    display: inline-block;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(73, 153, 218);
+
+}
+#Quizes , #Midterm , #FinalTest , #Oral{
+    margin-top: 10px;
+}
+#submitButton{
+    margin-right: 10px;
+}
+img{
+    height: 120px;
+    width: 120px;
+}
